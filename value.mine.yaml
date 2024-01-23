@@ -24,10 +24,10 @@ studio:
     repository: supabase/studio
     tag: 20230127-6bfd87b
   environment:
-    SUPABASE_URL: http://kube.tajbaevsh.uz
-    SUPABASE_REST_URL: http://kube.tajbaevsh.uz/rest/v1/
+    SUPABASE_URL: http://devops.smarts.uz
+    SUPABASE_REST_URL: http://devops.smarts.uz/rest/v1/
     STUDIO_PG_META_URL: http://demo-supabase-kong.default.svc.cluster.local:8000/pg
-    SUPABASE_PUBLIC_URL: http://kube.tajbaevsh.uz/
+    SUPABASE_PUBLIC_URL: http://devops.smarts.uz/
   ingress:
     enabled: true
     className: "nginx"
@@ -38,7 +38,7 @@ studio:
       #   hosts:
       #     - studio.localhost
     hosts:
-      - host: studio.tajbaevsh.uz
+      - host: Supabase.smarts.uz
         paths:
           - path: /
             pathType: Prefix
@@ -171,7 +171,7 @@ kong:
       #   hosts:
       #     - localhost
     hosts:
-      - host: kube.tajbaevsh.uz
+      - host: devops.smarts.uz
         paths:
           - path: /
             pathType: Prefix
